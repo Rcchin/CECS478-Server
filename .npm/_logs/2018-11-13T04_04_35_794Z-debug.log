@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v8.4.0/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v8.4.0/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@5.3.0
+3 info using node@v8.4.0
+4 verbose npm-session ae79d2297d16dde7
+5 silly install runPreinstallTopLevelLifecycles
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 verbose stack Error: Failed to parse json
+8 verbose stack Unexpected token '/' at 1:1
+8 verbose stack // package.json
+8 verbose stack ^
+8 verbose stack     at parseError (/home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:435:11)
+8 verbose stack     at parseJson (/home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:103:26)
+8 verbose stack     at /home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:50:5
+8 verbose stack     at /home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+8 verbose stack     at tryToString (fs.js:513:3)
+8 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:501:12)
+9 verbose cwd /home/ubuntu/testing
+10 verbose Linux 4.4.0-1065-aws
+11 verbose argv "/home/ubuntu/.nvm/versions/node/v8.4.0/bin/node" "/home/ubuntu/.nvm/versions/node/v8.4.0/bin/npm" "install"
+12 verbose node v8.4.0
+13 verbose npm  v5.3.0
+14 error file /home/ubuntu/testing/package.json
+15 error code EJSONPARSE
+16 error Failed to parse json
+16 error Unexpected token '/' at 1:1
+16 error // package.json
+16 error ^
+17 error File: /home/ubuntu/testing/package.json
+18 error Failed to parse package.json data.
+18 error package.json must be actual JSON, not just JavaScript.
+18 error
+18 error Tell the package author to fix their package.json file. JSON.parse
+19 verbose exit [ 1, true ]

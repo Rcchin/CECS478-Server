@@ -1,0 +1,14 @@
+ls
+rs
+use admin
+rs.status()
+rs
+rs.help()
+rs
+listDatabases
+help
+show dbs
+('Tasks', TaskSchema);
+use Tododb
+db
+show dbs

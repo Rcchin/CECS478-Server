@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v8.4.0/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v8.4.0/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   'body-parser',
+1 verbose cli   'morgan',
+1 verbose cli   'mongoose',
+1 verbose cli   'jsonwebtoken',
+1 verbose cli   '--save' ]
+2 info using npm@6.4.1
+3 info using node@v8.4.0
+4 verbose npm-session e75ded0d8ccff4b7
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 timing stage:rollbackFailedOptional Completed in 3ms
+8 timing stage:runTopLevelLifecycles Completed in 205ms
+9 verbose stack Error: Failed to parse json
+9 verbose stack Unexpected token { in JSON at position 175 while parsing near '...: "^5.3.11"
+9 verbose stack     }
+9 verbose stack }
+9 verbose stack {
+9 verbose stack   "name": "node-to...'
+9 verbose stack     at parseError (/home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:452:11)
+9 verbose stack     at parseJson (/home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:104:26)
+9 verbose stack     at /home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:51:5
+9 verbose stack     at /home/ubuntu/.nvm/versions/node/v8.4.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+9 verbose stack     at tryToString (fs.js:513:3)
+9 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:501:12)
+10 verbose cwd /home/ubuntu/testing
+11 verbose Linux 4.4.0-1065-aws
+12 verbose argv "/home/ubuntu/.nvm/versions/node/v8.4.0/bin/node" "/home/ubuntu/.nvm/versions/node/v8.4.0/bin/npm" "install" "express" "body-parser" "morgan" "mongoose" "jsonwebtoken" "--save"
+13 verbose node v8.4.0
+14 verbose npm  v6.4.1
+15 error file /home/ubuntu/testing/package.json
+16 error code EJSONPARSE
+17 error JSON.parse Failed to parse json
+17 error JSON.parse Unexpected token { in JSON at position 175 while parsing near '...: "^5.3.11"
+17 error JSON.parse     }
+17 error JSON.parse }
+17 error JSON.parse {
+17 error JSON.parse   "name": "node-to...'
+18 error JSON.parse Failed to parse package.json data.
+18 error JSON.parse package.json must be actual JSON, not just JavaScript.
+19 verbose exit [ 1, true ]
