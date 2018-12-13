@@ -23,3 +23,6 @@ The server is made up of two models, the user and the message. The user model al
 ## Built With
 * Javascript
 * RESTful API created on AWS Ubuntu
+
+## Presentation
+* [Presentation](https://github.com/Rcchin/CECS478-Server/blob/master/CECS_478_Presentation.pdf)
