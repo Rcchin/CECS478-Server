@@ -8,6 +8,7 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var jwt = require('jwt-simple');
+var bcrypt = require('bcryptjs');
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -74,11 +75,11 @@ router.route('/users')
 
 // Setup
 app.post('/setup', function(req, res) {
-
+var hash = bcrypt.hashSync(req.body.password, 10);
   // create a sample user
   var account = new User({ 
     name: req.body.name, 
-    password: req.body.password,
+    password: hash,
     admin: false 
   });
   
@@ -125,7 +126,7 @@ apiRoutes.post('/authenticate', function(req, res) {
     } else if (user) {
 
       // check if password matches
-      if (user.password != req.body.password) {
+      if (!bcrypt.compareSync(req.body.password, user.password)) {
         res.json({ success: false, message: 'Authentication failed. Wrong password.' });
       } else {
 
