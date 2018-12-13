@@ -36,14 +36,15 @@ router.use(function(req, res, next) {
     console.log('Something is happening.');
     next(); // make sure we go to the next routes and don't stop here
 });
-
+/*Used for testing
 // more routes for our API will happen here
 app.get('/', function(req, res) {
     res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
-
+*/
+/*
 router.route('/users')
-	// get all the users (accessed at GET http://localhost:8080/api/bears)
+	// get all the users (accessed at GET http://localhost:8080/api/users)
     .get(function(req, res) {
         User.find({}, function(err, users) {
 		res.json(users);
@@ -51,7 +52,7 @@ router.route('/users')
 
     router.route('/users/:user_id')
 
-    // get the user with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+    // get the user with that id (accessed at GET http://localhost:8080/api/users/:user_id)
     .get(function(req, res) {
         User.findById(req.params.user_id, function(err, user) {
             if (err)
@@ -72,7 +73,7 @@ router.route('/users')
     })
 
 });   
-
+*/
 // Setup
 app.post('/setup', function(req, res) {
 var hash = bcrypt.hashSync(req.body.password, 10);
