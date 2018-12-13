@@ -17,7 +17,7 @@ Must have the client side code found at (https://github.com/Rcchin/CECS478-Clien
 
 Built this project from multiple steps. Ultimate goal is to create a end to end encrption chat. Therefore even the server is an adversary. 
 
-###Server Side
+##Server Side
 The server is made up of two models, the user and the message. The user model allows us to create a user and verify that users "identity" with a token made by jwt. The message model contains payloads such as "RSACipher, ciphertext, tag, IV, sender and receiver. Since the server is an adversary, we made sure to not store any sensitive information on the server. The passwords to the users are salted and hashed by bcryptjs. The message text is encrypted by the client before it is sent to the server to be stored in the database.
 
 ## Built With
