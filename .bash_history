@@ -1,341 +1,3 @@
-ls
-cd /
-ls
-cd ~/todolistapi
-ls
-cd home
-ls
-cd ubuntu
-ls
-cd todolistapi
-ls
-cd todoListAPi
-cd todoListApi
-ls
-nano server.js
-ls
-cd api
-ls
-cd models
-ls
-nano todoListModel.js
-ls
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-cd todoListApi/
-ls
-cd api
-ls
-cd routes
-ls
-nano todoListRoutes.js 
-ls
-cd ..
-ls
-cd controllers
-ls
-nano todoListController.js 
-cd..
-ls
-cd ..
-ls
-cd ..
-ls
-nano server.js
-mongod
-rs
-mongod
-ls
-mongod
-ls
-mongod
-ps aux
-mongod
-kill sudo lsof -t -i:27017
-sudo mongod
-netstat -ano | findstr :27017
-npx kill-port 27017
-mongod
-npx kill-port 27017
-mongod
-npx kill-port 27017
-sudo mongod
-sudo mongod --port 27018
-sudo
-sudo root
-ls
-cd
-ls
-sudo
-root
-sudo su
-mongod
-ls
-locate -b '\mongo'
-locate -b '\todoListApi'
-cd
-sudo su
-ps aux
-kill -9 28829
-sudo kill 28829
-ps aux
-mongod
-psaux
-ps aux
-sudo mongod
-ps aux
-ls
-cd
-sudo su
-ps aux
-mongod
-ps aux
-ps -A | grep mongo
-ls
-ps -A | grep mongo
-ps aux
-sudo rm /data/db/mongod.lock
-ls
-sudo su
-rs
-node
-mongod
-nodemon
-npm restart
-npm rs
-ls
-cd
-mongod
-db.shutdownServer()
-ls
-mongod
-$ pgrep mongo
-pgrep mongo
-kill 29930
-kill -9 29930
-sudo kill 29930
-mongod
-sudo mongod
-npm run start
-monog
-mongo
-mongodb
-mongod
-mongo
-sudo mongo
-mongodb
-mongod
-sudo mongod
-mongo
-cd
-ls
-cd todoListApi
-ls
-nano server.js
-cd
-ls
-npm -v
-mongo --versin
-mongo --version
-ls
-cd todoListApi
-ls
-nano package.json
-mongod
-sudo monogod
-sudo mongod
-mongod
-ls
-cd todoListApi/
-ls
-npm init
-ls
-cat server.js 
-npm install --save-dev nodemon
-npm install express --save
-mongod
-ls
-node ser
-node server.js 
-nano  server.js 
-netstat tulpn\
-netstat tulpn
-netstat -tulpn
-kill -9 14409
-netstat -tulpn
-kill -9 32278
-netstat -tulpn
-kill -9 32285
-netstat -tulpn
-clear
-node server.js
-nano  server.js 
-
-ls
-nano server.js 
-ps aux | grep node
-kill -9 14403
-kill -9 32292
-kill -9 32339
-ps aux | grep node
-kill -9 32345
-ps aux | grep node
-nano server.js 
-node server.js 
-ps aux | grep node
-nano server.js 
-ls
-nano server.js 
-cd api
-ls
-cd routes
-ls
-cd ..
-ls
-nano server.js 
-mongod
-sudo mongod
-mongod
-sudo chown -R $USER /data/db
-mongod
-foreer
-forever
-ls
-forever start server.js
-mongod
-forever stop server.js
-forever status
-forever status server.js
-nano package.json
-nodemon server.js
-npm run start
-npm instal mongoose --save
-npm install mongoose --save
-npm run start
-mongod
-ls
-cd api
-ls
-cd ..
-ls
-cd todoListApi/
-ls
-npm run start
-ps aux | grep node
-kill -9 32750
-kill -9 32751
-kill -9 32763
-ps aux | grep node
-MongoNetworkError: failed to connect to server [localhost:27017] npm run start
-npm run start
-cd /etc/nginx
-ls
-sudo nano nginx.conf
-cd conf.d
-ls
-sudo nano server.conf
-sudo nano default.conf
-nginx -V
-sudo nano default.conf
-sudo systemctl restart nginx
-sudo nginx -t
-sudo nano default.conf
-sudo nginx -t
-sudo systemctl restart nginx
-npm run start
-cd ~
-cd todoListApi/
-ls
-npm run start
-ls
-nano server.js 
-cd /etc/nginx/conf.d
-nano default.conf
-cd 
-ls
-cd todoListApi/
-ls
-mkdir public
-ls
-cd public
-sudo nano index.html
-cd //
-ls
-cd ~
-ls cd 
-cd 
-ls
-cd todoListApi/
-ls
-nano server.js 
-npm run start
-ls
-cd api
-ls
-cd routes
-ls
-nano todoListRoutes.js 
-ls
-cd ..
-ls
-cd controllers/
-ls
-cd ..
-cd controllers/
-ls
-cat todoListController.js 
-cd ..
-ls
-cd routes
-ls
-cat todoListRoutes.js t
-cat todoListRoutes.js 
-cd ..
-npm run start
-ls
-nano server.js 
-cd api/models
-ls
-nano todoListModel.js 
-mongo
-cd ..
-nano server.js 
-mongo
-nano server.js 
-npm run start
-nano server.js 
-npm run start
-cd api
-ls
-cd controllers/
-ls
-nano todoListController.js 
-cd ..
-nano server.js 
-cd api
-ls
-cd routes
-ls
-cd ..
-ls
-nano server.js 
-cd api
-ls
-cd routes
-ls
-cd to
-nano todoListRoutes.js 
-cd ..
-ls
-cd controllers/
-ls
-nano todoListController.js 
-c d..
-cd ..
 npm run start
 cd api/routes/
 ls
@@ -1998,3 +1660,341 @@ kill $(lsof -t -i:3000)
 nodemon start
 kill $(lsof -t -i:3000)
 mongod
+ls
+cd
+rm -r CECS-478/
+sudo rm -rf CECS-478/
+ls
+mv testing CECS-478
+ls
+cd CECS-478/
+ls
+cd
+ls
+git init
+sudo rm -rf temp
+sudo rm -rf test
+sudo rm -rf todoListApi/
+ls
+git push origin master
+git add . CECS-478/
+sudo git add . CECS-478/
+gitt commit -m "Testing"
+git commit -m "Testing"
+ls
+git remote set-url origin https://github.com/Rcchin/CECS-478
+git remote add origin https://github.com/Rcchin/CECS-478
+git remote -v
+git push origin master
+git remote add origin https://github.com/Rcchin/CECS478-Server
+sudo git remove origin
+sudo git remote remove origin
+git remote add origin https://github.com/Rcchin/CECS478-Server
+git push origin master
+git pull
+cd
+ls
+git fetch --all
+ls
+git checkout
+ls
+sudo git add . CECS-478/
+git commit -m "Testing"
+sudo remote -v
+sudo git remote -v
+sudo git push origin master
+ls
+sudo git push origin master
+ls
+cd 
+ls
+cd .. 
+ls
+cd unbuntu
+ls
+cd ubuntu
+ls
+git init
+sudo git init
+sudo git remote add origin https://github.com/Rcchin/CECS478-Server
+sudo git remote remove origin
+sudo git remote add origin https://github.com/Rcchin/CECS478-Server
+sudo git push origin master
+git add .
+git commit -m "CECS-478"
+git add CECS-478
+git commit -m "Adding files"
+sudo git push -f origin master
+mongod
+nodemon
+ls
+cd CECS-478
+nodemon
+ls
+cd CECS-478
+nodemon
+nodemone
+nodemon
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+mongod
+kill $(lsof -t -i:3000)
+nodemon start
+ls
+cd CECS-478
+nodemon start
+ls
+cd
+cd CECS-478/
+ls
+nano server.js
+mongod
+cd CECS-478/
+ls
+nodemon start
+kill $(lsof -t i:3000)
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+sudo nodemon start
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+kill $(lsof -t -i:3000)
+nodemon start
+ps aux | grep node
+kill -9 4001
+kill -9 9620
+kill -9 11387
+kill -9 14108
+kill -9 14143
+ps aux | grep node
+nodemon start
+ps aux
+mongod
+sudo losf -t -i:27017
+sudo lsof -t -i:27017
+sudo kill lsof -t -i:27017
+kill lsof -t -i:27017
+sudo losf -t -i:27017
+sudo lsof -t -i:27017
+kill -9 1404
+kill -9 1
+sudo lsof -t -i:3000
+mongod
+cd CECS-478/
+nodemon start
+npm i -g nodemon
+nodemon start
+cd
+ls
+cd CECS-478
+ls
+sudo nano server.js
+mongod
+kill $(lsof -t -i:3000)
+kill $(lsof -t -i:27017)
+mongod
+ls
+cd CECS-478
+ls
+sudo nano server.js
+ls
+cd CECS-478/
+ls
+nano server.js
+ls
+cd node_modules/
+ls
+cd ..
+ls
+cd app
+ls
+cd models/
+ls
+cd bear.js
+nano bear.js
+nano user.js
+nano bear.js
+nano user.js
+nano bear.js
+nano user.js
+nano bear.js
+mv rn bear.js message.js
+mv bear.js message.js
+ls
+cd ..
+ls
+cd ..
+ls
+nano server.js
+fg
+nano server.js
+ls
+cd app
+ls
+cd models
+ls
+nano message.js
+ls
+cd CECS-478
+ls
+sudo nano server.js
+ls
+cd node_modules
+ls
+cd //
+ls
+cd home
+ls
+cd ubuntu
+ls
+cd CECS-478
+ls
+cd app
+ls
+cd models
+ls
+sudo nano user.js
+cd 
+ls
+cd CECS-478
+ls
+cd server.js
+sudo nano server.js
+ls
+cd CECS-478
+ls
+cd app
+ls
+cd ~
+ls
+cd CECS-478
+ls
+sudo nano server.js
+cd CECS-478/
+nano server.js
+cd CECS-478/
+nodemon start
+ps aux | grep node
+kill 14150
+ps aux | grep node
+kill 15085
+kill 15942
+nodemon start
+cd CECS-478/
+ls
+nano server.js
+ls
+cd app
+ls
+cd models
+ls
+cd user.js
+nano user.js
+cd..
+ls
+cd..
+ls
+cd..
+cd.
+cd..
+ls
+cd
+cd CECS-478/
+ls
+cd.
+cd..
+ls
+nano server.js
+npm install --save jwt-decode
+nano server.js
+npm install jwt-decode
+nano server.js
+npm i jwt-decode
+nano server.js
+npm i jwt-simple
+nano server.js
+cd CECS-478/
+mongod
+nodemon start
+mongod
+ls
+cd CECS-478/
+nodemon start
+fq
+fg
+mongod
+cd CECS-478/
+nodemon start
+mongod
+ls
+cd CECS-478/
+ls
+cd app
+ls
+cd models/
+ls
+nano message.js 
+cd..
+cd
+ls
+cd CECS-478/
+ls
+nano server.js
+cd CECS-478/
+nodemon start
+mongod
+ls
+cd CECS-478/
+ls
+cd app
+ls
+cd models/
+nano message.js 
+cd
+cd CECS-478/
+ls
+nano server.js
+nodemon start
+cd CECS-478/
+ls
+nano server.js
+cd app
+cd models/
+nano message.js 
+cd
+kill $(lsof -t -i:3000)
+ls
+cd CECS-478
+nodemon start
+ls
+cd server.js
+sudo nano server.js
+ls
+cd app
+ls
+cd ..
+nodemon start
+cd CECS0478
+cd CECS-478
+nodemon start
+ls
+cd CECS-478
+ls
+sudo nano server.js
+mongod
+cd CECS-478/
+nodemon start

@@ -7,7 +7,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-
+var jwt = require('jwt-simple');
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ var port = process.env.PORT || 3000;        // set our port
 var morgan      = require('morgan');
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/Database'); // connect to our database
-var Bear     = require('./app/models/bear');
+var Message     = require('./app/models/message');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our  mongoose model
@@ -133,7 +133,7 @@ apiRoutes.post('/authenticate', function(req, res) {
         // create a token with only our given payload
     // we don't want to pass in the entire user since that has the password
     const payload = {
-      admin: user.admin     };
+      name: user.name};
         var token = jwt.sign(payload, app.get('superSecret'), {
           expiresIn: 60*60*24 // expires in 24 hours
         });
@@ -188,88 +188,54 @@ apiRoutes.get('/', function(req, res) {
 // apply the routes to our application with the prefix /api
 app.use('/api', apiRoutes);
 
-// on routes that end in /bears
-// ----------------------------------------------------
-router.route('/bears')
-
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
-    .post(function(req, res) {
-
-        var bear = new Bear();      // create a new instance of the Bear model
-        bear.name = req.body.name;  // set the bears name (comes from the request)
-
-        // save the bear and check for errors
-        bear.save(function(err) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: 'Bear created!' });
-        });
-
-    })
-
-   // get all the bears (accessed at GET http://localhost:8080/api/bears)
-    .get(function(req, res) {
-        Bear.find(function(err, bears) {
-            if (err)
-                res.send(err);
-
-            res.json(bears);
-        });
-    })
-
-// on routes that end in /bears/:bear_id
-// ----------------------------------------------------
-router.route('/bears/:bear_id')
-
-    // get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
-    .get(function(req, res) {
-        Bear.findById(req.params.bear_id, function(err, bear) {
-            if (err)
-                res.send(err);
-            res.json(bear);
-        });
-    })
-
-  // update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
-    .put(function(req, res) {
-
-        // use our bear model to find the bear we want
-        Bear.findById(req.params.bear_id, function(err, bear) {
-
-            if (err)
-                res.send(err);
-
-            bear.name = req.body.name;  // update the bears info
-
-            // save the bear
-            bear.save(function(err) {
-                if (err)
-                    res.send(err);
-
-                res.json({ message: 'Bear updated!' });
-            });
-
-        });
-    })
-
-   // delete the bear with this id (accessed at DELETE http://localhost:8080/api/bears/:bear_id)
-    .delete(function(req, res) {
-        Bear.remove({
-            _id: req.params.bear_id
-        }, function(err, bear) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: 'Successfully deleted' });
-        });
-    });
-
-
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
+// Message API
+router.route('/message')
+    // create a message (accessed at POST http://localhost:8080/api/message)
+    .post(function(req, res) {
+
+var token = req.body.token || req.query.token || req.headers['x-access-token'];
+var decoded = jwt.decode(token, app.get('superSecret'));
+var UserName = decoded.name;
+        var message = new Message();      // create a new instance of the Message model
+        message.sender = UserName,  // set the message name (comes from the request)
+		message.receiver = req.body.receiver,
+		message.text = req.body.text,
+                message.RSACipher = req.body.RSACipher,
+                message.tag = req.body.tag,
+                message.IV = req.body.IV
+        if(!req.body.receiver) res.status(400).send("Receiver no input")
+        // save the message and check for errors
+else{
+        message.save(function(err) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Message created!' });
+        });
+}
+    })
+
+    // get the message with that id (accessed at GET http://localhost:8080/api/message/
+    .get(function(req, res) {
+var token = req.body.token || req.query.token || req.headers['x-access-token'];
+var decoded = jwt.decode(token, app.get('superSecret'));
+var UserName = decoded.name;
+
+        Message.find({receiver: UserName}, function(err, message) {
+            if (err)
+                res.send(err);
+            res.json(message);
+
+            Message.remove({receiver: UserName}, function(err, message) {
+            if (err)
+                res.send(err);
+            });
+        });
+    })
 // START THE SERVER
 // =============================================================================
 app.listen(port);
